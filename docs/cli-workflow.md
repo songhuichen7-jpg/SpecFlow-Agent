@@ -7,7 +7,7 @@
 推荐直接安装 CLI：
 
 ```bash
-uv tool install git+https://github.com/<owner>/specflow-agent.git
+uv tool install git+https://github.com/songhuichen7-jpg/SpecFlow-Agent.git
 ```
 
 安装完成后可直接使用 `specflow` 命令。

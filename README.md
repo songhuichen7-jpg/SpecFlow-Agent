@@ -61,10 +61,8 @@ CLI
 ### 1. 安装 CLI
 
 ```bash
-uv tool install git+https://github.com/<owner>/specflow-agent.git
+uv tool install git+https://github.com/songhuichen7-jpg/SpecFlow-Agent.git
 ```
-
-发布到 GitHub 后，将上面的 `<owner>` 替换为实际仓库所有者即可。
 
 ### 2. 在当前工作目录创建 `.env`
 
