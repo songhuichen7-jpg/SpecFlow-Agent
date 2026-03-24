@@ -125,7 +125,7 @@ __pycache__/
 """,
         "backend/pyproject.toml": """[project]
 name = "ticket-system-backend"
-version = "0.1.0"
+version = "1.0.0"
 requires-python = ">=3.11"
 dependencies = ["fastapi", "uvicorn"]
 """,
@@ -164,7 +164,7 @@ def test_healthz() -> None:
         "frontend/package.json": """{
   "name": "ticket-system-frontend",
   "private": true,
-  "version": "0.1.0",
+  "version": "1.0.0",
   "scripts": {
     "dev": "vite",
     "build": "echo build",

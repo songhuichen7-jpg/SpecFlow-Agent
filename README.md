@@ -1,5 +1,7 @@
 # SpecFlow-Agent
 
+[![CI](https://github.com/songhuichen7-jpg/SpecFlow-Agent/actions/workflows/ci.yml/badge.svg)](https://github.com/songhuichen7-jpg/SpecFlow-Agent/actions/workflows/ci.yml)
+
 SpecFlow-Agent 是一个“规格优先”的多阶段智能研发流水线。  
 它接收一段相对模糊的业务需求，围绕冻结后的规格工件，依次完成需求澄清、规格生成、任务拆解、项目脚手架生成、质量检查、评审和交付。
 

@@ -689,7 +689,7 @@ class ArchitectAgent:
         return f"""openapi: 3.1.0
 info:
   title: Simplified Internal Ticket System API
-  version: 0.1.0
+  version: 1.0.0
 paths:
   /api/tickets:
     get:

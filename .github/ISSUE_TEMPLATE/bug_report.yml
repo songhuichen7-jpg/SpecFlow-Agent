@@ -1,0 +1,51 @@
+name: Bug 反馈
+description: 提交一个可复现的问题，帮助我们快速定位和修复。
+title: "[Bug] "
+labels:
+  - bug
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: 问题描述
+      description: 简要说明你遇到了什么问题。
+      placeholder: 例如：执行 `specflow run ... --mode debug` 后卡在某个阶段没有继续。
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤
+      description: 请尽量写成可以直接复现的步骤。
+      placeholder: |
+        1. 安装方式：
+        2. 执行命令：
+        3. 当前目录中的配置：
+        4. 实际结果：
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期望结果
+      placeholder: 你原本预期应该发生什么？
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: 环境信息
+      description: 请补充系统、Python、uv、SpecFlow-Agent 版本等信息。
+      placeholder: |
+        - OS:
+        - Python:
+        - uv:
+        - specflow version:
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: 相关日志或截图
+      description: 可以粘贴 `specflow doctor`、报错堆栈或关键输出。
+      render: shell

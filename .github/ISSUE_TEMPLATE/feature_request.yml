@@ -1,0 +1,32 @@
+name: 功能建议
+description: 提交一个功能增强建议或产品想法。
+title: "[Feature] "
+labels:
+  - enhancement
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: 背景与问题
+      description: 说明你想解决什么问题，或当前体验哪里不够好。
+      placeholder: 例如：希望 CLI 可以更方便地查看某一类工件的详细内容。
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: 建议方案
+      description: 说明你理想中的行为或交互方式。
+      placeholder: 描述你希望新增或调整的能力。
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: 备选方案
+      description: 如果你已经考虑过其他方案，也可以写在这里。
+  - type: textarea
+    id: context
+    attributes:
+      label: 额外上下文
+      description: 可以补充截图、示例命令、参考项目或使用场景。

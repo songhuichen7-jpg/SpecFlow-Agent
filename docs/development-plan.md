@@ -1,6 +1,6 @@
 # SpecFlow-Agent v1 Development Plan
 
-版本：v1.0
+版本：v1.0.0
 状态：Draft
 最后更新：2026-03-24
 依据文档：[system-architecture.md](system-architecture.md)

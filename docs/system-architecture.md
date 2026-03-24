@@ -1,6 +1,6 @@
 # SpecFlow-Agent 系统架构设计文档
 
-版本：v1.0  
+版本：v1.0.0  
 状态：Implemented for v1  
 项目名称：SpecFlow-Agent  
 最后更新：2026-03-24
