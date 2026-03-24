@@ -1,0 +1,81 @@
+[build-system]
+requires = ["hatchling>=1.27.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "specflow-agent"
+version = "0.1.0"
+description = "Spec-first multi-agent software delivery pipeline."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "alembic>=1.16,<2.0",
+  "deepagents",
+  "fastapi>=0.116,<1.0",
+  "langchain>=1.0,<2.0",
+  "langchain-core>=1.0,<2.0",
+  "langchain-openrouter>=0.1.0",
+  "langgraph>=1.0,<2.0",
+  "langgraph-checkpoint-postgres>=3.0.5",
+  "langgraph-checkpoint-sqlite>=3.0.3",
+  "pydantic>=2.11,<3.0",
+  "pydantic-settings>=2.10,<3.0",
+  "sqlalchemy>=2.0,<3.0",
+  "typer>=0.20,<1.0",
+]
+
+[project.scripts]
+specflow = "specflow.cli.main:main"
+
+[dependency-groups]
+dev = [
+  "black>=24.10,<26.0",
+  "mypy>=1.15,<2.0",
+  "pytest>=8.3,<9.0",
+  "pytest-asyncio>=1.1,<2.0",
+  "ruff>=0.11,<1.0",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/specflow"]
+
+[tool.black]
+line-length = 100
+target-version = ["py311"]
+extend-exclude = '''
+/(
+  runs
+  | \.specflow
+)/
+'''
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+extend-exclude = ["runs", ".specflow"]
+
+[tool.ruff.lint]
+select = ["B", "E", "F", "I", "N", "UP"]
+
+[tool.mypy]
+python_version = "3.11"
+mypy_path = ["src"]
+plugins = ["pydantic.mypy", "sqlalchemy.ext.mypy.plugin"]
+packages = ["specflow"]
+check_untyped_defs = true
+disallow_incomplete_defs = true
+disallow_untyped_defs = true
+no_implicit_optional = true
+pretty = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+
+[[tool.mypy.overrides]]
+module = ["tests.*"]
+disallow_untyped_defs = false
+
+[tool.pytest.ini_options]
+addopts = "-q"
+asyncio_mode = "auto"
+pythonpath = ["src"]
+testpaths = ["tests"]
